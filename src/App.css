@@ -1,0 +1,46 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-1px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 500ms ease-out both;
+}
+
+.animate-slide-in-up {
+  animation: fadeIn 520ms ease-out both;
+}
+
+.animate-countdown-pulse {
+  animation: pulseSlow 2200ms ease-in-out infinite both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-in-up,
+  .animate-countdown-pulse {
+    animation: none;
+  }
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
